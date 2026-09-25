@@ -14,7 +14,10 @@ services:
     ports:
       - 3307:3306
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9a7444c9fd1d956b3d86fba140e5c547161f18ca
   php:
     image: vicentett1/php-xdebug:1.0
     depends_on:
