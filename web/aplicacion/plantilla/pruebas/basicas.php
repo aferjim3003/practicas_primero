@@ -22,11 +22,5 @@ function cuerpo()
 {
 ?>
     <br><br>
-    Elemento de pruebas
-
-    <br><br>
-<a href="basicas.php">Funcionamieno basico</a>
-
 <?php
-
 }
