@@ -1,26 +1,32 @@
 <?php
-include_once(dirname(__FILE__) . "/../../../cabecera.php");
+include_once(dirname(__FILE__) . "/cabecera.php");
 //controlador
 
-$usuario = getenv("MYSQL_USER");
+$usuario=getenv("MYSQL_USER");
 
 //dibuja la plantilla de la vista
 inicioCabecera("APLICACION PRIMER TRIMESTRE");
 cabecera();
 finCabecera();
-inicioCuerpo("2DAW APLICACION");
+inicioCuerpo("pruebas basicas");
 cuerpo();  //llamo a la vista
 finCuerpo();
 // **********************************************************
 
 //vista
-function cabecera() {}
+function cabecera() 
+{}
 
 //vista
 function cuerpo()
 {
 ?>
     <br><br>
-    <a href=""></a>
+    Elemento de pruebas
+
+    <br><br>
+<a href="basicas.php">Funcionamieno basico</a>
+
 <?php
+
 }
