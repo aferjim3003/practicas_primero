@@ -1,14 +1,14 @@
 <?php
-require_once __DIR__ . "/../../../cabecera.php";
+require_once __DIR__ . "/../../cabecera.php";
 //controlador
 
 $usuario=getenv("MYSQL_USER");
 
 //dibuja la plantilla de la vista
-inicioCabecera("APLICACION PRIMER TRIMESTRE");
+inicioCabecera("Relacion 1 ejercicios");
 cabecera();
 finCabecera();
-inicioCuerpo("pruebas basicas");
+inicioCuerpo("Relacion 1 Ejercicios");
 cuerpo();  //llamo a la vista
 finCuerpo();
 // **********************************************************

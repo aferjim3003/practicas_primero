@@ -7,7 +7,7 @@ body {
 
 #documento{
     margin: 0 auto;
-    background-color: #8080ff;
+    background-color: #60ffca;
     width: 700px;
 }
 #cabecera{
@@ -67,9 +67,11 @@ body {
     
 }
 
+/*
 .tabla tr.impar{
     
 }
+*/
 
 #pie{
     background-color: #81e714;
