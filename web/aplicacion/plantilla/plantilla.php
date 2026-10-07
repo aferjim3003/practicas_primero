@@ -5,7 +5,7 @@ function paginaError($mensaje)
   header("HTTP/1.0 404 $mensaje");
   inicioCabecera("PRACTICA");
   finCabecera();
-  inicioCuerpo("ERROR");
+  inicioCuerpo("ERROR", []);
   echo "<br />\n";
   echo $mensaje;
   echo "<br />\n";
@@ -48,7 +48,7 @@ function finCabecera()
 <?php   
 }
 
-function inicioCuerpo($cabecera)
+function inicioCuerpo(string $cabecera, array $ubicacion)
 {
     global $acceso;
 
@@ -68,6 +68,31 @@ function inicioCuerpo($cabecera)
                     <li><a href="/index.php">Inicio</a></li>
                  </ul> 
                 
+            </div>
+
+            <div id="barraUbicacion">  
+                <?php 
+             
+                    {
+                        
+                        foreach($ubicacion as $elemento)
+                            {
+                                if (isset($elemento["ENLACE"]))
+                                    {
+                                        echo "<a href='{$elemento["ENLACE"]}' >";
+
+                                    }
+                               
+                                echo $elemento["TEXTO"]. "&nbsp;&nbsp;";
+                                if (isset($elemento["ENLACE"]))
+                                    {
+                                echo "</a>";
+                                    }
+                                }
+
+
+                    } ?>
+             
             </div>
             
             <div>

@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . "/../../../cabecera.php";
+require_once __DIR__ . "/../plantilla/plantilla.php";
 //controlador
 
 define("NUME", 25);
@@ -16,7 +16,7 @@ $usuario=getenv("MYSQL_USER");
 inicioCabecera("APLICACION PRIMER TRIMESTRE");
 cabecera();
 finCabecera();
-inicioCuerpo("pruebas basicas");
+inicioCuerpo("pruebas basicas", []);
 cuerpo();  //llamo a la vista
 finCuerpo();
 // **********************************************************

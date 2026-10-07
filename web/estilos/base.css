@@ -93,3 +93,8 @@ body {
     border:thin solid red;
     padding:5px;
 }
+
+#barraUbicacion {
+    background-color: #14e737;
+    color: #60ffca;
+}
