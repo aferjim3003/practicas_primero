@@ -1,46 +1,37 @@
 <?php
-require_once __DIR__ . "/../../cabecera.php";
+include_once(dirname(__FILE__) . "/../../cabecera.php");
 //controlador
 
-$barra =[
-    [
-    "TEXTO"=>"inicio",
-    "ENLACE" =>"/index.php",
-    "ADICIONAL" => ">>"],
-    [
-    "TEXTO"=> "otro"
-    ],
-    [
-        "TEXTO"=>"index",
-        "ADICIONAL" => "&copy;&copy;"
-        ]
+$barra=[
+     [
+       "TEXTO"=> "inicio",
+       "ENLACE" =>"/index.php",
+     ],
+       [ 
+       "TEXTO"=> "pruebas"   
+     ],  
 ];
-
-$usuario=getenv("MYSQL_USER");
 
 //dibuja la plantilla de la vista
 inicioCabecera("APLICACION PRIMER TRIMESTRE");
 cabecera();
 finCabecera();
-inicioCuerpo("2DAW Aplicacion", $barra);
-cuerpo();  //llamo a la vista
+inicioCuerpo("2DAW APLICACION", $barra);
+cuerpo(); //llamo a la vista
 finCuerpo();
 // **********************************************************
 
 //vista
-function cabecera() 
-{}
-
+function cabecera() {}
 //vista
 function cuerpo()
 {
 ?>
     <br><br>
     Elemento de pruebas
-
     <br><br>
-<a href="basicas.php">Funcionamieno basico</a>
-
+    <a href="bas1icas.php">Funcionamiento básico</a><br>
+    <a href="pasopar.php">Comunicacion controlador-vista</a><br>
+    <a href="array.php">Array</a><br>
 <?php
-
 }
