@@ -1,32 +1,38 @@
 <?php
 require_once __DIR__ . "/../../cabecera.php";
-//controlador
 
-$usuario=getenv("MYSQL_USER");
+$ubicacion = [
+    [
+        "TEXTO" => "Inicio",
+        "ENLACE" => "/index.php",
+    ],
+    [
+        "TEXTO" => "Relacion 1",
+    ],
+];
 
-//dibuja la plantilla de la vista
-inicioCabecera("Relacion 1 ejercicios");
+inicioCabecera("Relacion 1 ");
 cabecera();
 finCabecera();
-inicioCuerpo("Relacion 1 Ejercicios");
-cuerpo();  //llamo a la vista
+inicioCuerpo("Relacion 1", $ubicacion);
+cuerpo();
 finCuerpo();
-// **********************************************************
 
-//vista
-function cabecera() 
-{}
+function cabecera()
+{
+}
 
-//vista
 function cuerpo()
 {
 ?>
-    <br><br>
-    Elemento de pruebas
-
-    <br><br>
-<a href="basicas.php">Funcionamieno basico</a>
-
+    <?php // enlaces a los ejercicios de la relacion ?>
+    <p>Ejercicios</p>
+    <p><a href="/aplicacion/relacion1/ejercicio1.php">Ejercicio1</a></p>
+    <p><a href="/aplicacion/relacion1/ejercicio2.php">Ejercicio 2</a></p>
+    <p><a href="/aplicacion/relacion1/ejercicio3.php">Ejercicio 3</a></p>
+    <p><a href="/aplicacion/relacion1/ejercicio4.php">Ejercicio4</a></p>
+    <p><a href="/aplicacion/relacion1/ejercicio5.php">Ejercicio 5</a></p>
+    <p><a href="/aplicacion/relacion1/ejercicio6.php">Ejercicio 6</a></p>
+    <p><a href="/aplicacion/relacion1/ejercicio7.php">Ejercicio 7</a></p>
 <?php
-
 }

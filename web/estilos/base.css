@@ -98,3 +98,16 @@ body {
     background-color: #14e737;
     color: #60ffca;
 }
+
+#barraMenu ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem;
+}
+
+.punto-seguro {
+    display: inline-block;
+    margin: 0.5rem;
+}

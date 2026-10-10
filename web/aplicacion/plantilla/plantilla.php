@@ -50,13 +50,12 @@ function finCabecera()
 
 function inicioCuerpo(string $cabecera, array $ubicacion=[])
 {
-    global $acceso;
-
 ?>
     <body>
         <div id="documento">
         
             <header>
+                <a class="punto-seguro" href="/index.php" aria-label="Ir al inicio">Inicio</a>
                 <h1 id="titulo"><?php echo $cabecera;?></h1>
             </header>
             
@@ -67,6 +66,7 @@ function inicioCuerpo(string $cabecera, array $ubicacion=[])
                 <ul>
                     <li><a href="/index.php">Inicio</a></li>
                     <li><a href="/aplicacion/pruebas/index.php">Ejemplos Basicos</a></li>
+                    <li><a href="/aplicacion/relacion1/index.php">Relacion 1</a></li>
                     
                  </ul> 
                 
