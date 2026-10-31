@@ -33,12 +33,40 @@ finCuerpo();
 //vista
 function cabecera() {}
 //vista
+
+
+/**
+ * funcion que me permite mostrar la vista
+ *
+ * @return void
+ */
 function cuerpo()
 {
 ?>
     <br><br>esto es html //esto es un comentario
     <?php 
         echo "klñfffdj";  // esto es un comentario
+
+        //
+        /*
+
+        */
+
+        /**
+         * 
+         */
+        
+        $cadena=date("d/m/Y H:i:s");
+
+        /**
+         * variable que representa el dia de hoy
+         */
+        $hoy= new DateTime();
+        $cadena=$hoy->format('d/m/Y H:i:s');
+
+        //le sumo 2 dias,  15 horas, 30 minutos
+        $hoy->add(new DateInterval("P2DT15H30M"));
+        $cadena=$hoy->format('d/m/Y H:i:s');
 
         $var1=25;
         $cadena='esto es una cadena';
@@ -58,7 +86,6 @@ function cuerpo()
         if (isset($cadena2))
              echo $cadena2;
 
-     //   echo "el numero real $real";
         
         $real=1234.56789012345678901;
         $real+=  0.432109876549;
@@ -115,7 +142,6 @@ function cuerpo()
         $aux=true;
         $var="hola ".$aux;
         $aux=[];
-      //  $var="hola ".$aux;
         $aux="adios";
         $var="hola ".$aux;
 

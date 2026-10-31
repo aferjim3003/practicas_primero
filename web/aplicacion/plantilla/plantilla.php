@@ -48,15 +48,17 @@ function finCabecera()
 <?php   
 }
 
-function inicioCuerpo(string $cabecera, array $ubicacion=[])
+function inicioCuerpo($cabecera, array $barraUbi=[])
 {
+    global $acceso;
+
 ?>
     <body>
         <div id="documento">
         
             <header>
-                <a class="punto-seguro" href="/index.php" aria-label="Ir al inicio">Inicio</a>
-                <h1 id="titulo"><?php echo $cabecera;?></h1>
+                <span id="logo"><a href="/"><img src="/imagenes/logo.png"></a></span>
+                <span id="titulo"><?php echo $cabecera;?></span>
             </header>
             
             <div id="barraLogin">
@@ -64,69 +66,40 @@ function inicioCuerpo(string $cabecera, array $ubicacion=[])
             </div>
             <div id="barraMenu">
                 <ul>
-                    <li><a href="/index.php">Inicio</a></li>
-                    <li><a href="/aplicacion/pruebas/index.php">Ejemplos Basicos</a></li>
-                    <li><a href="/aplicacion/relacion1/index.php">Relacion 1</a></li>
-                    <li><a href="/aplicacion/relacion2/index.php">Relacion 2</a></li>
-                    <li><a href="/aplicacion/relacion4/index.php">Relacion 4</a></li>
-                    
+                    <li><a href="/aplicacion/pruebas/index.php">Ej Basicos</a></li>
+                    <li><a href="/aplicacion/relacion1/index.php">Rel 1</a></li>
+                    <li><a href="/aplicacion/relacion2/index.php">Rel-2</a></li>
+                    <li><a href="/aplicacion/relacion3/index.php">Rel-3</a></li>
+                    <li><a href="/aplicacion/relacion4/index.php">Rel 4</a></li>
                  </ul> 
                 
             </div>
-            <div id="barraUbicacion">
-                  <?php
-                  if ($ubicacion)
+            <div id="barraUbicacion"><?php
+                if (isset($barraUbi))
                     {
-                        
-
-                        foreach($ubicacion as $elemento)
+                        $primero=true;
+                        foreach ($barraUbi as $elemento) 
                             {
-                                if (isset($elemento["ENLACE"]))
-                                    {
-                                        echo "<a href='{$elemento["ENLACE"]}' >";
-                                    }
-                                echo $elemento["TEXTO"];
-                               
-
-                                if (isset($elemento["ENLACE"]))
-                                    {
-                                        echo "</a>";
-                                    }
-
-                                 if (isset($elemento["ADICIONAL"]))
-                                            echo $elemento["ADICIONAL"];
-                                           else
-                                            echo "&nbsp;&nbsp;";
+                                if (isset($elemento["TEXTO"]))
+                                {
+                                    if (!$primero)
+                                        echo " >> ";        
+                                    if (isset($elemento["ENLACE"]) && $elemento["ENLACE"])
+                                            echo " <a href=\"{$elemento["ENLACE"]}\" >";
                                     
-                                //otra solucion
-/*                                if (isset($elemento["ENLACE"]))
-                                    {
-                                        echo "<a href='{$elemento["ENLACE"]}' >";
-                                        echo $elemento["TEXTO"];
-                                        if (isset($elemento["ADICIONAL"]))
-                                            echo $elemento["ADICIONAL"];
-                                           else
-                                            echo "&nbsp;&nbsp;";
-                                        echo "</a>";
-                                    }
-                                   else
-                                    {
-                                        echo $elemento["TEXTO"];
-                                        if (isset($elemento["ADICIONAL"]))
-                                            echo $elemento["ADICIONAL"];
-                                           else
-                                            echo "&nbsp;&nbsp;";
-                                 
-                                    }
-*/                                
+                                    echo $elemento["TEXTO"];
+
+                                    if (isset($elemento["ENLACE"]) && $elemento["ENLACE"])
+                                            echo " </a>";
+                                    
+                                    $primero=false;
+                                }
 
                             }
                     }
-
-
-                    ?>
+                ?>
             </div>
-            
+    
             <div>
 <?php   
 }
@@ -140,7 +113,7 @@ function finCuerpo()
             <footer>
                 <hr width="90%"  />  
                 <div>
-                    &copy; Copyright  by Profesor
+                    &copy; Copyright  by Vicente 2026-27
                 </div>
             </footer>
         </div>

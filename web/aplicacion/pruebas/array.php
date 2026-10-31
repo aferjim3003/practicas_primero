@@ -9,7 +9,7 @@ const NUME1=56;
 inicioCabecera("APLICACION PRIMER TRIMESTRE");
 cabecera();
 finCabecera();
-inicioCuerpo("ARRAY",[]);
+inicioCuerpo("ARRAY");
 cuerpo(); //llamo a la vista
 finCuerpo();
 // **********************************************************

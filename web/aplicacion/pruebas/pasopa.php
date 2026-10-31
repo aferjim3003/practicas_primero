@@ -20,7 +20,7 @@ $otras=rellenarOtras();
 inicioCabecera("Mi aplicacion");
 cabecera();
 finCabecera();
-inicioCuerpo("PASO PARAMETROs", []);
+inicioCuerpo("PASO PARAMETROs");
 cuerpo($basicos, $otras);  //llamo a la vista
 finCuerpo();
 // **********************************************************

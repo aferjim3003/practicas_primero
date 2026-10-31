@@ -1,27 +1,75 @@
 @charset "UTF8";
 
 body {
-    background-color: cyan;
+    background-color: rgb(0, 255, 170);
     font-size: 16px;
 }
 
 #documento{
     margin: 0 auto;
-    background-color: #60ffca;
-    width: 700px;
+    background-color: #76e4ff;
+    width: 90%;
 }
-#cabecera{
-    background-color: #14e737;
+header{
+    background-color: #b464ffd5;
     padding: 5px;
 }
-#cabecera #logo{
+header #logo{
     width: 75px;
     height: 50px;
 }
-
-#cabecera #titulo{
+header #titulo{
     font-size: 1.3em;
     font-style: italic;
+}
+
+#barraUbicacion{
+    background-color: #488ae0;
+    color:white;
+    padding: 5px;
+}
+
+#barraUbicacion a:link,#barraUbicacion a:visited{
+    text-decoration: none;
+    background-color: #14b2e7;
+    color:white;
+
+}
+#barraUbicacion a:hover{
+    background-color: white;
+    color:#14b2e7;
+}
+
+#barraMenu {
+    padding: 8px 20px;
+    background-color: #3b5a4e;
+    border: 5 solid #0d0e0d;
+    border-radius:5px;
+}
+
+#barraMenu a,
+#barraMenu span {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+#barraMenu a:link,#barraMenu a:visited {
+    text-decoration: none;
+}
+
+#barraMenu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 16px;
+    padding: 0;
+}
+
+footer {
+   background-color: #14c97e;
+    padding: 5px;
+
 }
 
 .boton{
@@ -67,11 +115,11 @@ body {
     
 }
 
-/*
 .tabla tr.impar{
-    
+     background-color: rgb(201, 231, 245);
+    color: black;
+   
 }
-*/
 
 #pie{
     background-color: #81e714;
@@ -92,22 +140,4 @@ body {
     color:red;
     border:thin solid red;
     padding:5px;
-}
-
-#barraUbicacion {
-    background-color: #14e737;
-    color: #60ffca;
-}
-
-#barraMenu ul {
-    display: flex;
-    gap: 1rem;
-    list-style: none;
-    margin: 0;
-    padding: 0.5rem;
-}
-
-.punto-seguro {
-    display: inline-block;
-    margin: 0.5rem;
 }
