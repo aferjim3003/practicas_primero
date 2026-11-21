@@ -15,7 +15,8 @@ services:
       - 3307:3306
 
   php:
-    image: vicentett1/php-xdebug:1.0
+    build: .
+    image: practicas-primero-php-gd:1.0
     depends_on:
       - bd
     volumes:
